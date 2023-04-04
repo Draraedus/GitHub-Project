@@ -1,0 +1,110 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+    background-color: #0c1117;
+}
+
+.gitContainer {
+    flex-grow: 0.90;
+    margin-top: 100px;
+}
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px ;
+    border-radius: 10px;
+    background-color: #000409;
+}
+
+.searchContainer input {
+    height: 25px;
+    width: 220px;
+    margin-right: 10px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    text-indent: 3px;
+}
+
+.searchContainer button {
+    border: none;
+    background-color: #000409;
+}
+
+.searchContainer button :hover {
+    width: 22px;
+    height: 22px;
+}
+
+.navContainer {
+    display: flex;
+    margin-top: 30px;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.navContainer button {
+    padding: 3px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #000409;
+    color: white;
+}
+
+.navContainer button:hover {
+    background-color: #201e1e;
+}
+
+.navContainer button ::selection {
+    background-color: #201e1e;
+}
+
+.dataContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000409;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.userContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    border-radius: 7px;
+    padding-right: 70px;
+}
+
+.userContainer img {
+    width: 100px;
+    height: 100px;
+    color: white;
+}
+
+.userContainer h2 {
+    margin-bottom: 0;
+    color: white;
+}
+
+.userContainer h3 {
+    margin-top: 10px;
+    color: #a2a4a5;
+}
+
+.numbersContainer p {
+    color: white;
+}
+
+.numbersContainer p::before {
+    padding-left: 5px;
+    font-size: 3em;
+    color: orange;
+}
