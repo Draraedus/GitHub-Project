@@ -130,6 +130,11 @@ body {
     padding: 10px;
 }
 
+.listContainer li:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
 .listContainer li img {
     height: 150px;
     width: 150px;

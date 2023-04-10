@@ -1,118 +1,47 @@
-let userName = ""
-let userData = {}
-let userFollowers = []
-let userFollowing = []
-let userRepos = []
+function search(method, callback, name = null){
 
-function loading() {
-    document.getElementsByClassName('dataContainer')[0].innerHTML = `
-    <svg class="loadingIcon" xmlns="http://www.w3.org/2000/svg" width="160" height="160" fill="orange" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
-        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
-    </svg>
-    `
-}
-
-function searchProfile() {
-    loading()
-    
+    let userName = ''
+    name != null ? userName = name :
     userName = document.querySelector('.searchContainer input').value
     
+    loading()
     setTimeout(() => {
-        let urlProfile = `https://api.github.com/users/${userName}`
-        let httpProfile = new XMLHttpRequest()
+        let url = ""
+
+        switch (method) {
+            case "followers":
+                url = `https://api.github.com/users/${userName}/followers`
+                break
+            case "following":
+                url = `https://api.github.com/users/${userName}/following`
+                break
+            case "repos":
+                url = `https://api.github.com/users/${userName}/repos`
+                break
+            default:
+                url = `https://api.github.com/users/${userName}`
+                break
+        }
         
-        httpProfile.open("GET", urlProfile, true)
-        httpProfile.onreadystatechange = function(){
-            if ( httpProfile.readyState == 4 && httpProfile.status == 200 ) {
-                userData = JSON.parse(httpProfile.responseText)
-                
-                profile()
+        let httpRequest = new XMLHttpRequest()
+        
+        httpRequest.open("GET", url, true)
+        httpRequest.onreadystatechange = function(){
+            if ( httpRequest.readyState == 4 && httpRequest.status == 200 ){
+                data = JSON.parse(httpRequest.responseText)
+                callback(data)
             }
-            else if ( httpProfile.readyState == 4 && httpProfile.status == 404 )
+            else if ( httpRequest.readyState == 4 && httpRequest.status == 404 )
             {
                 noUser404()
             }
         }
-        httpProfile.send()
+        httpRequest.send()
     }, 1000);
     
 }
 
-function searchFollowers() {
-    
-    loading()
-    
-    userName = document.querySelector('.searchContainer input').value
-    
-    setTimeout(() => {
-        let urlFollowers = `https://api.github.com/users/${userName}/followers`
-
-        let httpFollowers = new XMLHttpRequest()
-
-        httpFollowers.open("GET", urlFollowers, true)
-        httpFollowers.onreadystatechange = function(){
-            if ( httpFollowers.readyState == 4 && httpFollowers.status == 200 ) {
-                userFollowers = JSON.parse(httpFollowers.responseText)
-
-                followers()
-            }
-        }
-        httpFollowers.send()
-        
-    }, 1000);
-}
-
-function searchFollowing(){
-
-    loading()
-    
-    userName = document.querySelector('.searchContainer input').value
-    
-    setTimeout(() => {
-        let urlFollowing = `https://api.github.com/users/${userName}/following`
-
-        let httpFollowing = new XMLHttpRequest()
-    
-        httpFollowing.open("GET", urlFollowing, true)
-        httpFollowing.onreadystatechange = function(){
-            if ( httpFollowing.readyState == 4 && httpFollowing.status == 200 ) {
-                userFollowing = JSON.parse(httpFollowing.responseText)
-
-                following()
-            }
-        }
-        httpFollowing.send()
-        
-    }, 1000);
-}
-
-function searchRepos(){
-
-    loading()
-    
-    userName = document.querySelector('.searchContainer input').value
-    
-    setTimeout(() => {
-        let urlRepos = `https://api.github.com/users/${userName}/repos`
-
-        let httpRepos = new XMLHttpRequest()
-    
-        httpRepos.open("GET", urlRepos, true)
-        httpRepos.onreadystatechange = function(){
-            if ( httpRepos.readyState == 4 && httpRepos.status == 200 ) {
-                userRepos = JSON.parse(httpRepos.responseText)
-                
-                repos()
-            }
-        }
-        httpRepos.send()
-
-        
-    }, 1000);
-}
-
-function profile() {
+function profile(userData) {
 
     document.getElementsByClassName('dataContainer')[0].innerHTML = `
         <div class="userContainer">
@@ -128,13 +57,13 @@ function profile() {
     `
 }
 
-function followers() {
+function followers(userFollowers) {
 
     document.getElementsByClassName('dataContainer')[0].innerHTML = `
         <ul class="listContainer">
         ${userFollowers.map( follower => {return (
             `
-                <li>
+                <li onclick="search('profile', profile, ${follower.login})">
                     <img src=${follower.avatar_url} alt="follower">
                     <p>${follower.login}</p>
                 </li>
@@ -144,13 +73,13 @@ function followers() {
     `
 }
 
-function following() {
+function following(userFollowing) {
 
     document.getElementsByClassName('dataContainer')[0].innerHTML = `
         <ul class="listContainer">
         ${userFollowing.map( following => {return (
             `
-                <li>
+                <li onclick="search('profile', profile, ${following.login})>
                     <img src=${following.avatar_url} alt="following">
                     <p>${following.login}</p>
                 </li>
@@ -160,7 +89,7 @@ function following() {
     `
 }
 
-function repos() {
+function repos(userRepos) {
 
     document.getElementsByClassName('dataContainer')[0].innerHTML = `
         <ul class="listRepoContainer">
@@ -192,5 +121,14 @@ function noUser404() {
             </svg>
             <h2>Usuário Não Encontrado</h2>
         </div>
+    `
+}
+
+function loading() {
+    document.getElementsByClassName('dataContainer')[0].innerHTML = `
+    <svg class="loadingIcon" xmlns="http://www.w3.org/2000/svg" width="160" height="160" fill="orange" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+    </svg>
     `
 }
