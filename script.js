@@ -1,8 +1,10 @@
-function search(method, callback, name = null){
+function search(method, callback, userName = null){
 
-    let userName = ''
-    name != null ? userName = name :
-    userName = document.querySelector('.searchContainer input').value
+    if(userName === null)
+        userName = document.querySelector('.searchContainer input').value
+    else {
+        document.querySelector('.searchContainer input').value = userName
+    }
     
     loading()
     setTimeout(() => {
@@ -63,7 +65,7 @@ function followers(userFollowers) {
         <ul class="listContainer">
         ${userFollowers.map( follower => {return (
             `
-                <li onclick="search('profile', profile, ${follower.login})">
+                <li onclick="search('profile', profile, '${follower.login}')">
                     <img src=${follower.avatar_url} alt="follower">
                     <p>${follower.login}</p>
                 </li>
@@ -79,7 +81,7 @@ function following(userFollowing) {
         <ul class="listContainer">
         ${userFollowing.map( following => {return (
             `
-                <li onclick="search('profile', profile, ${following.login})>
+                <li onclick="search('profile', profile, '${following.login}')">
                     <img src=${following.avatar_url} alt="following">
                     <p>${following.login}</p>
                 </li>
