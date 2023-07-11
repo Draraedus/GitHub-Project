@@ -1,0 +1,105 @@
+.primaryContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    flex-grow: 1;
+    height: 100%;
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    background-color: #000409;
+}
+
+.headerContainerTittle {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+
+    margin-left: 15px;
+}
+
+.headerContainerTittle h1 {
+    color: orange;
+    font-size: 2.3em;
+}
+
+.headerContainerTittle h2 {
+    color: white;
+}
+
+.headerContainerSearch {
+    display: flex;
+    align-items: center;
+
+    margin-right: 15px;
+}
+
+.headerContainerSearch input {
+    height: 25px;
+    width: 220px;
+    margin-right: 10px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    text-indent: 3px;
+}
+
+.headerContainerSearch button {
+    border: none;
+    background-color: #000409;
+}
+
+.headerContainerSearch button svg {
+    width: 22px;
+    height: 22px;
+    fill: orange;
+}
+
+.headerContainerSearch button:hover svg{
+    fill: white;
+    cursor: pointer;
+}
+
+.headerContainerSearch button:disabled svg {
+    width: 16px;
+    height: 16px;
+    fill: #a2a4a5;
+    cursor: default;
+}
+
+.navContainer {
+    display: flex;
+    margin-top: 30px;
+}
+
+.navContainer button {
+    padding: 3px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #000409;
+    color: white;
+    cursor: pointer;
+}
+
+.navContainer button:hover {
+    background-color: #201e1e;
+}
+
+.navContainer button ::selection {
+    background-color: #201e1e;
+}
+
+.dataContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    background-color: #000409;
+}

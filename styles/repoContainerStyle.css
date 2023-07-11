@@ -1,0 +1,27 @@
+.listRepoContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+.listRepoItemContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #201e1e;
+}
+
+.listRepoItemFirst{
+    margin-left: 10px;
+}
+
+.listRepoItemFirst p {
+    color: grey;
+    font-size: 0.8em;
+}
+
+.listRepoItemLast {
+    margin-right: 10px;
+    text-align: center;
+}

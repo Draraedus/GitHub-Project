@@ -1,0 +1,22 @@
+.loadingIcon {
+    animation: loading 2s linear infinite;
+}
+
+.noUserContainer {
+    display: flex;
+    color: red;
+}
+
+.noUserContainer h2 {
+    padding-left: 30px;
+}
+
+
+@keyframes loading {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
