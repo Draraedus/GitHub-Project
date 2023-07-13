@@ -1,13 +1,19 @@
 .primaryContainer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
     flex-grow: 1;
+
+    display: grid;
+    grid-template-areas: 
+    'cabecalho cabecalho'
+    'navigation content';
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px 1fr;
+
     height: 100%;
 }
 
 .headerContainer {
+    grid-area: cabecalho;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -62,7 +68,7 @@
     fill: orange;
 }
 
-.headerContainerSearch button:hover svg{
+.headerContainerSearch button:not([disabled]):hover svg{
     fill: white;
     cursor: pointer;
 }
@@ -75,31 +81,39 @@
 }
 
 .navContainer {
+    grid-area: navigation;
+
     display: flex;
-    margin-top: 30px;
+    flex-direction: column;
 }
 
 .navContainer button {
     padding: 3px 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    height: 130px;
     background-color: #000409;
+    border: none;
     color: white;
     cursor: pointer;
 }
 
-.navContainer button:hover {
+.navContainer button:disabled {
+    color: #a2a4a5;
+    cursor: default;
+}
+
+.navContainer button:not([disabled]):hover {
     background-color: #201e1e;
 }
 
-.navContainer button ::selection {
-    background-color: #201e1e;
+.navContainer button:not([disabled]):active {
+    background-color: rgb(207, 207, 207);
 }
 
 .dataContainer {
+    grid-area: content;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 300px;
     background-color: #000409;
 }
