@@ -1,0 +1,16 @@
+# GITHUB Project
+
+## Objetivo
+    Fixar meus conhecimentos em diversas tecnologias frontend, desejo explorar cada vez mais esse mundo e esse projeto tem como por objetivo isso. Minha idéia é fazer vários protótipos desse site começando com javascript puro e depois progredindo para frameworks frontend da linguagem e até de outras linguagens.
+
+## O que é?
+    É um projeto de website que utiliza a API pública do github para trazer dados de um usuário cadastrado no github por meio de uma barra de pesquisa.
+
+## Versão 1.0A
+    Nessa versão temos o projeto em javascript puro de uma forma bem simples, as cores principais são o preto, cinza e laranja. Ainda não se têm um cabeçalho nessa versão e nem um rodapé, mas já é uma versão utilizável do projeto no conceito de pesquisar os usuários por meio da api. É uma versão simples mas "completa".
+
+### Linguagem utilizada nessa versão
+    Javascript, html e css puros.
+
+### Ferramentas utilizadas nessa versão
+    API do github.
