@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid #201e1e;
+    border: 2px solid var(--GRAY);
 }
 
 .listRepoItemFirst{
@@ -19,7 +19,7 @@
 }
 
 .listRepoItemFirst p {
-    color: grey;
+    color: var(--GRAY);
     font-size: 0.8em;
 }
 

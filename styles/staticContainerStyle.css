@@ -6,7 +6,7 @@
     'cabecalho cabecalho'
     'navigation content';
     grid-template-columns: 100px 1fr;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 80px 1fr;
 
     height: 100%;
 }
@@ -20,7 +20,7 @@
 
     width: 100%;
 
-    background-color: #000409;
+    border-bottom: solid 1.5px var(--GREEN);
 }
 
 .headerContainerTittle {
@@ -32,12 +32,12 @@
 }
 
 .headerContainerTittle h1 {
-    color: orange;
+    color: var(--GREEN);
     font-size: 2.3em;
 }
 
 .headerContainerTittle h2 {
-    color: white;
+    color: var(--WHITE);
 }
 
 .headerContainerSearch {
@@ -59,24 +59,24 @@
 
 .headerContainerSearch button {
     border: none;
-    background-color: #000409;
+    background-color: var(--BLACK);
 }
 
 .headerContainerSearch button svg {
     width: 22px;
     height: 22px;
-    fill: orange;
+    fill: var(--GREEN);
 }
 
 .headerContainerSearch button:not([disabled]):hover svg{
-    fill: white;
+    fill: var(--WHITE);
     cursor: pointer;
 }
 
 .headerContainerSearch button:disabled svg {
     width: 16px;
     height: 16px;
-    fill: #a2a4a5;
+    fill: var(--GRAY);
     cursor: default;
 }
 
@@ -85,28 +85,31 @@
 
     display: flex;
     flex-direction: column;
+
+    border-right: solid 1.5px var(--GREEN);
 }
 
 .navContainer button {
     padding: 3px 10px;
-    height: 130px;
-    background-color: #000409;
+    height: 110px;
+    background-color: var(--BLACK);
     border: none;
-    color: white;
+    color: var(--WHITE);
     cursor: pointer;
+    border: solid 1.5px var(--GREEN);
 }
 
 .navContainer button:disabled {
-    color: #a2a4a5;
+    color: var(--GRAY);
     cursor: default;
 }
 
 .navContainer button:not([disabled]):hover {
-    background-color: #201e1e;
+    background-color: var(--BLACKLIGHT);
 }
 
 .navContainer button:not([disabled]):active {
-    background-color: rgb(207, 207, 207);
+    background-color: var(--GRAY);
 }
 
 .dataContainer {
@@ -115,5 +118,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000409;
+    background-color: var(--BLACK);
 }

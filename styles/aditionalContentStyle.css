@@ -4,7 +4,7 @@
 
 .noUserContainer {
     display: flex;
-    color: red;
+    color: var(--RED);
 }
 
 .noUserContainer h2 {

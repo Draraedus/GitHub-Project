@@ -17,13 +17,13 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 2px solid orange;
+    border: 2px solid var(--GREEN);
     margin: 5px;
     padding: 10px;
 }
 
 .listContainer li:hover {
-    background-color: orange;
+    background-color: var(--GREEN);
     cursor: pointer;
 }
 
@@ -33,6 +33,6 @@
 }
 
 .listContainer li p {
-    color: white;
+    color: var(--WHITE);
     font-size: 1.2em;
 }

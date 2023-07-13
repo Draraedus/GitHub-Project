@@ -8,11 +8,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000409;
+    background-color: var(--BLACK);
+}
+
+:root {
+    --GREEN: #23CE6B;
+    --GRAY: #747C92;
+    --BLACK: #272D2D;
+    --BLACKLIGHT: #313838;
+    --WHITE: #FDFFFC;
+    --RED: #C73E1D;
 }
 
 .white {
-    color: white;
+    color: var(--WHITE);
 }
 
 .invert{

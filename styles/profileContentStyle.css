@@ -11,25 +11,25 @@
 .userContainer img {
     width: 100px;
     height: 100px;
-    color: white;
+    color: var(--WHITE);
 }
 
 .userContainer h2 {
     margin-bottom: 0;
-    color: white;
+    color: var(--WHITE);
 }
 
 .userContainer h3 {
     margin-top: 10px;
-    color: #a2a4a5;
+    color: var(--GRAY);
 }
 
 .numbersContainer p {
-    color: white;
+    color: var(--WHITE);
 }
 
 .numbersContainer p::before {
     padding-left: 5px;
     font-size: 3em;
-    color: orange;
+    color: var(--GREEN);
 }
