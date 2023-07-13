@@ -14,3 +14,7 @@ body {
 .white {
     color: white;
 }
+
+.invert{
+    transform: rotate(180deg);
+}

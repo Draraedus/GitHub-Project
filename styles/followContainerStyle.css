@@ -1,8 +1,13 @@
 .listContainer {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+
+    height: 100%;
+
     list-style: none;
     overflow: auto;
 }
@@ -29,4 +34,5 @@
 
 .listContainer li p {
     color: white;
+    font-size: 1.2em;
 }
