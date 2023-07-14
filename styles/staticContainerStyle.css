@@ -112,6 +112,10 @@
     background-color: var(--GRAY);
 }
 
+.navContainer button:disabled svg {
+    fill: var(--GRAY);
+}
+
 .dataContainer {
     grid-area: content;
 
