@@ -1,16 +1,18 @@
 function profile(userData) {
 
     document.getElementsByClassName('dataContainer')[0].innerHTML = `
-        <div class="userContainer">
-            <img src=${userData.avatar_url} alt="userImage" class="userImage">
-            <h2 class="userName">${userData.name}</h2>
-            <h3 class="userNick">${userData.login}</h3>
-        </div>
-        <div class="numbersContainer">
-            <p class="followers">Seguidores: ${userData.followers}</p>
-            <p class="following">Seguindo: ${userData.following}</p>
-            <p class="repos">Repositórios: ${userData.public_repos}</p>
-        </div>
+        <div class="profileContainer">
+            <div class="userInfoContainer">
+                <img src=${userData.avatar_url} alt="userImage" class="userImage">
+                <h2 class="userName">${userData.name}</h2>
+                <h3 class="userNick">${userData.login}</h3>
+            </div>
+            <div class="numbersContainer">
+                <p class="followers">Seguidores: ${userData.followers}</p>
+                <p class="following">Seguindo: ${userData.following}</p>
+                <p class="repos">Repositórios: ${userData.public_repos}</p>
+            </div>
+        <div>
     `
 }
 

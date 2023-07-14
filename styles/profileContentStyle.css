@@ -1,42 +1,52 @@
-.userContainer {
+.profileContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 15px;
+}
+
+.userInfoContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-    margin-top: 30px;
-    padding-right: 70px;
-    
-    border-radius: 7px;
 }
 
-.userContainer img {
-    width: 100px;
-    height: 100px;
+.userInfoContainer img {
+    width: 200px;
+    height: 200px;
 
     color: var(--WHITE);
 }
 
-.userContainer h2 {
+.userInfoContainer h2 {
     margin-bottom: 0;
     
     color: var(--WHITE);
+
+    font-size: 1.8em;
 }
 
-.userContainer h3 {
+.userInfoContainer h3 {
     margin-top: 10px;
     
     color: var(--GRAY);
 }
 
 .numbersContainer p {
+    padding-bottom: 5px;
+
     color: var(--WHITE);
+
+    font-size: 1.3em;
 }
 
 .numbersContainer p::before {
-    padding-left: 5px;
- 
-    color: var(--GREEN);
-    
-    font-size: 3em;
+    content: url(../assets/circle-solid.svg);
+
+    padding-right: 5px;
 }
