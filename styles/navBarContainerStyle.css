@@ -1,0 +1,46 @@
+.navContainer {
+    grid-area: navigation;
+
+    display: flex;
+    flex-direction: column;
+
+    border-right: solid 1.5px var(--GREEN);
+}
+
+.navContainer button {
+    height: 110px;
+    
+    padding: 3px 10px;
+    
+    background-color: var(--BLACK);
+    color: var(--WHITE);
+    
+    border: none;
+    border: solid 1.5px var(--GREEN);
+    
+    cursor: pointer;
+}
+
+.navContainer button:disabled {
+    color: var(--GRAY);
+    
+    cursor: default;
+}
+
+.navContainer button:not([disabled]):hover {
+    background-color: var(--BLACKLIGHT);
+}
+
+.navContainer button:not([disabled]):active {
+    background-color: var(--GRAY);
+}
+
+.navContainer button:disabled svg {
+    fill: var(--GRAY);
+}
+
+@media only screen and (max-width: 600px) {
+    .navContainer {
+        display: none;
+    }
+}

@@ -1,0 +1,22 @@
+.primaryContainer {
+    flex-grow: 1;
+
+    display: grid;
+    grid-template-areas: 
+    'cabecalho cabecalho'
+    'navigation content';
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 80px 1fr;
+
+    height: 100%;
+}
+
+.dataContainer {
+    grid-area: content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    background-color: var(--BLACK);
+}

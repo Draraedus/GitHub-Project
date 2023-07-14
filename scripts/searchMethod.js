@@ -1,9 +1,12 @@
 function search(method, callback, userName = null){
 
     if(userName === null)
+        document.querySelector('.headerContainerSearch input').value === null ? 
+        userName = document.querySelector('.sideMenuContainerSearch input').value :
         userName = document.querySelector('.headerContainerSearch input').value
     else {
         document.querySelector('.headerContainerSearch input').value = userName
+        document.querySelector('.sideMenuContainerSearch input').value = userName
     }
     
     loading()

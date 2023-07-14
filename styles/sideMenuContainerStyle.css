@@ -1,0 +1,53 @@
+.sideMenuContainer {
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 140px;
+
+    right: -140px;
+    transition: right 0.3s ease;
+
+    border-left: solid 1px var(--GREEN);
+
+    background-color: var(--BLACK);
+}
+
+.sideMenuContainerSearch {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sideMenuContainerSearch input {
+    width: 80px;
+}
+
+.sideMenuContainerSearch button {
+    width: 20px;
+
+    border: none;
+}
+
+.sideMenuContainer button{
+
+    height: 50px;
+
+    border: none;
+    border-bottom: solid 1px var(--GREEN);
+    border-top: solid 1px var(--GREEN);
+
+    background-color: var(--BLACK);
+}
+
+.sidebar-expanded {
+    right: 0;
+}
+
+@media only screen and (min-width: 600px) {
+    .sideMenuContainer {
+        display: none;
+    }
+}
