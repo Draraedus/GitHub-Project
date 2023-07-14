@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.querySelector('.headerContainerSearch input')
     const searchButton = document.querySelector('.headerContainerSearch button')
-    const profileButton = document.querySelectorAll('.navContainer button')[0]
-    const followersButton = document.querySelectorAll('.navContainer button')[1]
-    const followingButton = document.querySelectorAll('.navContainer button')[2]
-    const reposButton = document.querySelectorAll('.navContainer button')[3]
+    const profileButton = document.querySelectorAll('.navContainer button')[1]
+    const followersButton = document.querySelectorAll('.navContainer button')[2]
+    const followingButton = document.querySelectorAll('.navContainer button')[3]
+    const reposButton = document.querySelectorAll('.navContainer button')[4]
 
     searchInput.addEventListener('input', function() {
         if (searchInput.value.length > 0) {

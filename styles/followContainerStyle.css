@@ -20,12 +20,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 2px solid var(--GREEN);
+
     padding: 10px;
+    
+    border: 2px solid var(--GREEN);
 }
 
 .listContainer li:hover {
     background-color: var(--GREEN);
+
     cursor: pointer;
 }
 
@@ -36,5 +39,6 @@
 
 .listContainer li p {
     color: var(--WHITE);
+    
     font-size: 1.2em;
 }

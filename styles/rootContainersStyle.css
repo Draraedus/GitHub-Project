@@ -1,13 +1,16 @@
 html, body {
-    font-family: monospace;
-    margin: 0;
     height: 100%;
+
+    margin: 0;
+
+    font-family: monospace;
 }
 
 body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
     background-color: var(--BLACK);
 }
 

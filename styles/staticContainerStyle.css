@@ -33,6 +33,7 @@
 
 .headerContainerTittle h1 {
     color: var(--GREEN);
+
     font-size: 2.3em;
 }
 
@@ -50,33 +51,41 @@
 .headerContainerSearch input {
     height: 25px;
     width: 220px;
+    
     margin-right: 10px;
+    
     border-radius: 7px;
     border: none;
+    
     outline: none;
     text-indent: 3px;
 }
 
 .headerContainerSearch button {
     border: none;
+    
     background-color: var(--BLACK);
 }
 
 .headerContainerSearch button svg {
     width: 22px;
     height: 22px;
+    
     fill: var(--GREEN);
 }
 
 .headerContainerSearch button:not([disabled]):hover svg{
     fill: var(--WHITE);
+    
     cursor: pointer;
 }
 
 .headerContainerSearch button:disabled svg {
     width: 16px;
     height: 16px;
+    
     fill: var(--GRAY);
+    
     cursor: default;
 }
 
@@ -90,17 +99,22 @@
 }
 
 .navContainer button {
-    padding: 3px 10px;
     height: 110px;
+    
+    padding: 3px 10px;
+    
     background-color: var(--BLACK);
-    border: none;
     color: var(--WHITE);
-    cursor: pointer;
+    
+    border: none;
     border: solid 1.5px var(--GREEN);
+    
+    cursor: pointer;
 }
 
 .navContainer button:disabled {
     color: var(--GRAY);
+    
     cursor: default;
 }
 
@@ -122,5 +136,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
+ 
     background-color: var(--BLACK);
 }
