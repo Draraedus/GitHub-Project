@@ -19,6 +19,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    height: 50px;
 }
 
 .sideMenuContainerSearch input {
@@ -27,11 +29,16 @@
 
 .sideMenuContainerSearch button {
     width: 20px;
+    height: 20px;
+
+    padding: 0;
 
     border: none;
+
+    background-color: var(--BLACK);
 }
 
-.sideMenuContainer button{
+.sideMenuContainer > button{
 
     height: 50px;
 
@@ -40,6 +47,10 @@
     border-top: solid 1px var(--GREEN);
 
     background-color: var(--BLACK);
+}
+
+.sideMenuContainer button:disabled svg {
+    fill: var(--GRAY);
 }
 
 .sidebar-expanded {
