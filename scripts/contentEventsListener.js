@@ -49,10 +49,17 @@ document.addEventListener('DOMContentLoaded', function() {
     sideMenuSearchInput.addEventListener('input', toggleDisable)
 
 
-    const toggleButton = document.querySelector('.sideMenuButtonContainer');
+    const toggleButton1 = document.querySelector('.sideMenuButtonContainer');
+    const toggleButton2 = document.querySelector('.sideMenuButtonClose');
     const sidebar = document.querySelector('.sideMenuContainer');
+    const primaryContainer = document.querySelector('.primaryContainer')
 
-    toggleButton.addEventListener('click', function() {
+    function toggleSideMenuBar() {
         sidebar.classList.toggle('sidebar-expanded');
-    });
-});
+        primaryContainer.classList.toggle('blur')
+        toggleButton2.classList.toggle('displayNone')
+    }
+    
+    toggleButton1.addEventListener('click', toggleSideMenuBar)
+    toggleButton2.addEventListener('click', toggleSideMenuBar)
+})

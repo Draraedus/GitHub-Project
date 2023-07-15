@@ -57,8 +57,30 @@
     right: 0;
 }
 
+.sideMenuButtonClose {
+    display: none;
+
+    position: fixed;
+    right: 150px;
+    top: 20px;
+
+    border: none;
+
+    background-color: var(--BLACK);
+}
+
+.displayNone {
+    top: -40px;
+}
+
 @media only screen and (min-width: 600px) {
     .sideMenuContainer {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .sideMenuButtonClose {
+        display: block;
     }
 }

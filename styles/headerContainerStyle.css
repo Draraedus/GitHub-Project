@@ -82,7 +82,7 @@
     cursor: default;
 }
 
-.sideMenuButtonContainer {
+.sideMenuButtonContainer{
     display: none;
 
     background-color: var(--BLACK);
