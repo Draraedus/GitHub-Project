@@ -1,7 +1,7 @@
 .listContainer {
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
     row-gap: 8px;
     column-gap: 8px;
@@ -40,4 +40,10 @@
 
 .listContainer li p {
     color: var(--WHITE);
+}
+
+@media only screen and (max-width: 600px) {
+    .listContainer {
+        justify-content: space-around;
+    }
 }
