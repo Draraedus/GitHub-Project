@@ -17,8 +17,8 @@
 }
 
 .homeImgContainer {
-    width: 15%;
-    height: 15%;
+    width: var(15% + 100px);
+    height: var(15% + 100px);
 }
 
 .homeImgContainer svg{

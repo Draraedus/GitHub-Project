@@ -24,3 +24,13 @@
 .blur {
     filter: blur(5px)
 }
+
+@media only screen and (max-width: 600px) {
+    .primaryContainer {
+        grid-template-areas: 
+        'cabecalho'
+        'content';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}

@@ -66,7 +66,7 @@
 
     border: none;
 
-    background-color: var(--BLACK);
+    background-color: transparent;
 }
 
 .displayNone {
