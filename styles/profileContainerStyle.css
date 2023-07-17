@@ -8,6 +8,9 @@
     row-gap: 15px;
 
     height: 100%;
+
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 .userInfoContainer {
