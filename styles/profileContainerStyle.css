@@ -6,6 +6,8 @@
     flex-wrap: wrap;
     column-gap: 25px;
     row-gap: 15px;
+
+    height: 100%;
 }
 
 .userInfoContainer {

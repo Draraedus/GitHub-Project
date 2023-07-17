@@ -6,13 +6,10 @@
     row-gap: 8px;
     column-gap: 8px;
 
-    height: 98%;
-
     margin: 20px 10px;
     padding: 0;
 
     list-style: none;
-    overflow: auto;
 }
 
 .listContainer li {
@@ -22,6 +19,10 @@
     flex-direction: column;
 
     padding: 10px;
+    box-sizing: border-box;
+
+    height: 150px;
+    width: 140px;
     
     border: 2px solid var(--GREEN);
 }
@@ -33,12 +34,10 @@
 }
 
 .listContainer li img {
-    height: 150px;
-    width: 150px;
+    height: 80px;
+    width: 80px;
 }
 
 .listContainer li p {
     color: var(--WHITE);
-    
-    font-size: 1.2em;
 }

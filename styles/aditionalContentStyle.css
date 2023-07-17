@@ -1,4 +1,6 @@
 .loadingIcon {
+    align-self: center;
+
     animation: loading 2s linear infinite;
 }
 
