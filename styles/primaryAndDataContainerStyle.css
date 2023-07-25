@@ -4,9 +4,10 @@
     display: grid;
     grid-template-areas: 
     'cabecalho cabecalho'
-    'navigation content';
+    'navigation content'
+    'rodape rodape';
     grid-template-columns: 100px 1fr;
-    grid-template-rows: 80px 1fr;
+    grid-template-rows: 80px 1fr 60px;
 
     height: 100%;
 }
@@ -29,7 +30,8 @@
     .primaryContainer {
         grid-template-areas: 
         'cabecalho'
-        'content';
+        'content'
+        'rodape';
         grid-template-columns: 1fr;
     }
 }
